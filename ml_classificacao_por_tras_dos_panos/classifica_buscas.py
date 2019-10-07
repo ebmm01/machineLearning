@@ -45,6 +45,7 @@ teste_marcacoes = y[tamanho_de_treino:fim_de_teste]
 validacao_dados = x[fim_de_teste:]
 validacao_marcacoes = y[fim_de_teste:]
 
+print(validacao_marcacoes)
 
 
 # Crio o modelo
@@ -118,9 +119,11 @@ Vale uma observação aqui: inicialmente calculávamos essa taxa de acerto base 
 com as marcações de validações para validar o nosso algoritmo final. Ou seja, a taxa de acerto do agoritmo vencedor e a taxa de acerto do
 algoritmo burro foram feitas com base nos exatos mesmos dados. 
 """
-
+# {"nao":30, "sim":70}
 # Com o counter eu conto os valores de 0's e 1's, sim e nãp, etc, e pego esses valores com o values()
 acerto_base = max(Counter(validacao_marcacoes).values())
 
 print(f"Taxa de acerto base (algoritmo 'burro'): {acerto_base/len(validacao_marcacoes)*100}%") 
 
+# Random Forest
+# Relatório descrevendo multinomialNB e Adaboost, citando parâmetros e explicando cada um deles

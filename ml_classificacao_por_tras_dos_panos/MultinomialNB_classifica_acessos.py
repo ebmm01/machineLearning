@@ -10,12 +10,12 @@ não fique contaminado, tendo resuldados que não vão ser de fato fiéis.
 """
 
 # Base de treino
-treino_dados = x[:90]
-treino_marcacoes = y[:90]
+treino_dados = x[:70]
+treino_marcacoes = y[:70]
 
 # Base de testes
-teste_dados = x[-9:]
-teste_marcacoes = y[-9:]
+teste_dados = x[-29:]
+teste_marcacoes = y[-29:]
 
 # Carrego meu modelo
 modelo = MultinomialNB()
