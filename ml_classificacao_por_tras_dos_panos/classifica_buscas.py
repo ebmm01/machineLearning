@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.naive_bayes import MultinomialNB 
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
 from collections import Counter
 
 # Leio com o pandas e retono um dataframe
@@ -45,11 +46,6 @@ teste_marcacoes = y[tamanho_de_treino:fim_de_teste]
 validacao_dados = x[fim_de_teste:]
 validacao_marcacoes = y[fim_de_teste:]
 
-print(validacao_marcacoes)
-
-
-# Crio o modelo
-modelo_MultinomialNB = MultinomialNB()
 
 def treina_e_prediz(teste_marcacoes, teste_dados,treino_dados, treino_marcacoes, modelo):
 
@@ -70,7 +66,9 @@ def treina_e_prediz(teste_marcacoes, teste_dados,treino_dados, treino_marcacoes,
     print(f"Taxa de acerto: {taxa_de_acerto_local}%")
     return taxa_de_acerto_local
 
+# Crio o modelo
 print("Teste com MultinomialNB: \n")
+modelo_MultinomialNB = MultinomialNB()
 resultado_MultinomialNB = treina_e_prediz(teste_marcacoes, teste_dados,treino_dados, treino_marcacoes, modelo_MultinomialNB)
 
 
@@ -86,6 +84,13 @@ print("\nTeste com AdaBoostClassifier")
 modelo_AdaBoost = AdaBoostClassifier()
 
 resultado_AdaBoost = treina_e_prediz(teste_marcacoes, teste_dados, treino_dados, treino_marcacoes, modelo_AdaBoost)
+
+# Por fim, com o random Forest
+print("\nTeste com RandomForestClassifier")
+modelo_RandomForest = RandomForestClassifier()
+
+resultado_RandomForest = treina_e_prediz(teste_marcacoes, teste_dados, treino_dados, treino_marcacoes, modelo_RandomForest)
+
 
 """
 Comparamos qual dos dois algoritmos teve o melhor resultado e a partir disso fazemos uma nota predição
