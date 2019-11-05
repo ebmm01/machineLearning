@@ -108,6 +108,7 @@ Por fim, após toda a parte custosa do Deep Learning ter sido finalizada, podemo
 
     Gera previsões de saída para as amostras de entrada.
 
+
 ![](./predict.png)
 
 ## Referências
