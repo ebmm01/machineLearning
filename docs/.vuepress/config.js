@@ -1,5 +1,6 @@
 module.exports = {
     title: 'Ml blog',
+    base: '/machineLearning/',
     description: 'Todos os relatórios e afins sobre machine learning, deep learning e Visão computacional estarão aqui.',
     themeConfig: {
         displayAllHeaders: true,
