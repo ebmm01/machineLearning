@@ -4,3 +4,4 @@ tensorflow
 ipython
 matplotlib
 pandas
+tensorflowjs
