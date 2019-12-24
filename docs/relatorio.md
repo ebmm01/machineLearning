@@ -104,7 +104,7 @@ O retorno é um objeto _History_. Seu atributo __History.history__ é um registr
 
     historico = modelo.fit(imagens_treino, identificacoes_treino, epochs=5, validation_split=0.2)
 
-![](./fit.png)
+![](./img/fit.png)
 
 ## Predict
 
@@ -113,7 +113,7 @@ Por fim, após toda a parte custosa do Deep Learning ter sido finalizada, podemo
     Gera previsões de saída para as amostras de entrada.
 
 
-![](./predict.png)
+![](./img/predict.png)
 
 ## Referências
 
