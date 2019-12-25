@@ -8,9 +8,10 @@ module.exports = {
             { text: 'Relatorios', link: '/relatorio/' }
         ],
         sidebar: [
+            '/sobre',
             {
                 title: 'Machine Learning',
-                 sidebarDepth: 2,
+                sidebarDepth: 2,
                 children: [
                     // These are pages we'll add later
                     '/relatorioAP', 
