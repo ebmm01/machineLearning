@@ -1,5 +1,5 @@
 ---
-title: Estudo e Aplicação de Técnicas de Machine Learning
+title: Sobre a Wiki & PIBIC
 ---
 
 ### Sobre a wiki
