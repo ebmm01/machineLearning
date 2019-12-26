@@ -23,8 +23,9 @@ module.exports = {
                 sidebarDepth: 2,
                 children: [
                     // These are pages we'll add later
+                    '/sobre_dl',
                     '/relatorio',
-                    '/relatorio_tfjs', 
+                    '/relatorio_tfjs',
                 ]
             }
         ]
