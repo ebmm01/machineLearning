@@ -27,10 +27,30 @@ Apesar de tudo, as redes neurais recorrentes possuem alguns problemas, dentre os
 - Treinar um RNN é uma tarefa muito difícil.
 - Ele não pode processar seqüências muito longas se estiver usando [__tanh__](https://theclevermachine.wordpress.com/tag/tanh-function/) ou [__relu__](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/) como uma função de ativação.
 
+## Redes LSTM
+
+As redes Long Short-Term Memory (LSTM) são uma versão modificada de redes neurais recorrentes, que facilitam a lembrança de dados anteriores ​​na memória. O problema do __gradiente de fuga (vanishing gradient) das RNN's é resolvido aqui__. O LSTM é adequado para classificar, processar e prever séries temporais, visto que os LSTMs são projetados para evitar o problema de dependência de longo prazo. Ele treina o modelo usando back-propagation (ou propagação traseira). 
+
+Em uma rede LSTM, três 'portões' (_gates_) estão presentes:
+
+![](https://miro.medium.com/max/1044/1*MwU5yk8f9d6IcLybvGgNxA.jpeg)
+
+- __Portão de entrada__: descobre qual valor da entrada deve ser usado para modificar a memória. A função __sigmóide__ decide quais valores deixar passar entre 0 e 1. e a função __tanh__ atribui peso aos valores passados, decidindo seu nível de importância variando de -1 a 1.
+
+- __Portão de esquecimento__: descobre quais detalhes devem ser descartados do bloco. É decidido pela função __sigmóide__. O portão olha o estado anterior (ht-1) e conteúdo de entrada (Xt) e gera um número entre 0 (omita isso) e 1 (mantenha isso) para cada número no estado da célula Ct-1.
+
+- __Portão de saída__: a entrada e a memória do bloco são usadas para decidir a saída. A função __sigmóide__ decide quais valores deixar passar, entre 0 e 1,  e a função __tanh__ dá peso aos valores passados, decidindo seu nível de importância, variando de -1 a 1 e multiplicado pela saída da __sigmóide__.
+
+![](https://pathmind.com/images/wiki/greff_lstm_diagram.png)
+
+
+
 ## Referências
 
 [Redes Neurais Recorrentes](http://deeplearningbook.com.br/redes-neurais-recorrentes/)
 
 [A Beginner's Guide to LSTMs and Recurrent Neural Networks](https://pathmind.com/wiki/lstm)
+
+[MACHINE LEARNING DE SÉRIES TEMPORAIS – LSTM](https://www.monolitonimbus.com.br/machine-learning-de-series-temporais-lstm/)
 
 [Understanding RNN and LSTM](https://towardsdatascience.com/understanding-rnn-and-lstm-f7cdf6dfc14e)
