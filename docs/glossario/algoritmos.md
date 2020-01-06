@@ -1,3 +1,7 @@
+---
+title: Algoritmos de ML
+---
+
 ## Multinominal Naive bayes
 
 O classificador __multinomial Naive Bayes__ é adequado para classificação com recursos discretos (por exemplo, contagem de palavras para classificação de texto). Ele utiliza o __maximum a posteriori__ como regra de decisão. Ele estima a probabilidade condicional de uma palavra específica dada uma classe como a frequência relativa do termo t em documentos pertencentes à classe (c). A variação leva em consideração o número de ocorrências do termo t nos documentos de treinamento da classe (c), incluindo várias ocorrências. 

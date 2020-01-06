@@ -5,29 +5,44 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Relatorios', link: '/relatorio/' }
+            { text: 'Relatorios', link: '/relatorios/relatorio' },
+            { text: 'Glossário', link: '/glossario/sobre_dl/'},
+            { text: 'Artigos', link: '/artigos/'}
         ],
-        sidebar: [
-            '/sobre',
-            {
-                title: 'Machine Learning',
-                sidebarDepth: 2,
-                children: [
-                    // These are pages we'll add later
-                    '/relatorioAP', 
-                    '/relatorioMl'
-                ]
-            },
-            {
-                title: 'Deep Learning',
-                sidebarDepth: 2,
-                children: [
-                    // These are pages we'll add later
-                    '/sobre_dl',
-                    '/relatorio',
-                    '/relatorio_tfjs',
-                ]
-            }
-        ]
+        sidebar: {
+            '/relatorios/': [
+                {
+                    title: 'Machine Learning',
+                    children: [
+                        // These are pages we'll add later
+                        'relatorioAP', 
+                        'relatorioMl'
+                    ]
+                },
+                {
+                    title: 'Deep Learning',
+                    children: [
+                        //These are pages we'll add later
+                       
+                        'relatorio',
+                        'relatorio_tfjs',
+                    ]
+                }
+            ],
+            '/glossario/': [
+                {   
+                    title: 'Conceitos & algoritmos',
+                    children: [
+                        'sobre_dl',
+                        'algoritmos'
+                    ]
+                }
+                
+            ],
+            '/artigos/': [
+                ''
+            ]
+           
+        }
     },
 }
