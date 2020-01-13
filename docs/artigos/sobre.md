@@ -1,12 +1,15 @@
 ---
-title: Sobre a Wiki & PIBIC
+title: Sobre
 ---
+## A seção
 
-### Sobre a wiki
+Essa seção é dedicada à resumos de artigos científicos sobre predição de evasão escolar. Todos os artigos serão devidamente referenciados.
+
+## A Wiki
 
 A wiki tem por objetivo centrar todos os relatórios, projetos e afins sobre o PIBIC - __Estudo e Aplicação de Técnicas de Machine Learning__. Conforme os temas forem explorados e novos projetos forem sendo feitos, tópicos serão adicionados à sidebar à esquerda. Atualmente ela está dividida em __Deep Learning__ e __Machine learning__, porém mais tópicos serão adicionados.
 
-### Adequação do plano de trabalho ao nível de Iniciação Científica e ao projeto de pesquisa do orientador
+## Adequação do plano de trabalho ao nível de Iniciação Científica e ao projeto de pesquisa do orientador
 
 Machine Learning (aprendizado de máquina) é o estudo e uso de algoritmos e modelos estatísticos que possibilitam que sistemas de software possam fazer inferências sobre determinados padrões e, assim, executar tarefas sem a necessidade explícita de intervenção humana. 
 

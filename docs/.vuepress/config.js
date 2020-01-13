@@ -4,8 +4,8 @@ module.exports = {
     description: 'Todos os relatórios e afins sobre machine learning, deep learning e Visão computacional estarão aqui.',
     themeConfig: {
         nav: [
-            { text: 'Artigos', link: '/artigos/'},
-            { text: 'Glossário', link: '/glossario/sobre_dl/'},
+            { text: 'Artigos', link: '/artigos/sobre'},
+            { text: 'Glossário', link: '/glossario/funcoes/'},
             { text: 'Relatorios', link: '/relatorios/relatorio' },
         ],
         sidebar: {
@@ -14,7 +14,8 @@ module.exports = {
                     title: 'Artigos',
                     children: [
                         'sobre',
-                        'artigo1'
+                        'artigo1',
+                        'artigo2'
                     ]
                 }
             ],
@@ -38,9 +39,9 @@ module.exports = {
                 {   
                     title: 'Glossário',
                     children: [
+                        'funcoes',
                         'sobre_dl',
                         'algoritmos',
-                        'funcoes'
                     ]
                 }
             ],
