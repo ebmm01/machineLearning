@@ -15,7 +15,8 @@ module.exports = {
                     children: [
                         'sobre',
                         'artigo1',
-                        'artigo2'
+                        'artigo2',
+                        'artigo3'
                     ]
                 }
             ],
