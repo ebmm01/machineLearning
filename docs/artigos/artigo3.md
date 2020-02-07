@@ -4,6 +4,8 @@ title: An Efficient Model for Predicting Student Dropout using Data Mining and M
 
 ## Resumo
 
+_Um modelo eficiente para prever o abandono do aluno usando técnicas de mineração de dados e aprendizado de máquina_ (tradução livre)
+
 O paper fala sobre um modelo de predição de evasão escolar utilizando __Mineração de dados__ e técnicas de __aprendizado de máquina__. Apesar de ter certo foco na mineração de dados, ele também traz pontos interessantes sobre as aplicações de algoritmos de aprendizado de máquina utilizando árvores de decisão
 
 ### Trabalho proposto

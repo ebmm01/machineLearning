@@ -4,6 +4,8 @@ title: 'Enhanced prediction of student dropouts using fuzzy inference system and
 
 ## Resumo
 
+_Previsão aprimorada de evasão de alunos usando o sistema de inferência difusa e regressão logística_ (tradução livre)
+
 O ___paper___ fala sobre o problema da evasão escolar, citando o fato de que o índice de evasão escolar na Índia chega a quase 16%. Com base nisso e dados coletados de diversas faculdades eles propõem um algoritmo de Previsão de Desistência (_Dropout Prediction Algorithm_ - DPA) usando [lógica difusa](../glossario/funcoes.html#conceitos-diversos) e um sistema de inferência baseado em [regressão logística](../glossario/funcoes.html#logistica)
 
 ### Trabalho proposto

@@ -16,7 +16,8 @@ module.exports = {
                         'sobre',
                         'artigo1',
                         'artigo2',
-                        'artigo3'
+                        'artigo3',
+                        'artigo4'
                     ]
                 }
             ],
