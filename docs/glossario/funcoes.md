@@ -14,6 +14,10 @@ title: Conceitos diversos
 
 - __Lógica difusa__: forma de lógica multivalorada, na qual os valores de verdade das variáveis podem ser qualquer número real entre 0/falso e 1/verdadeiro, diferentemente do que se verifica na lógica booleana, segundo a qual os valores lógicos podem ser apenas 0 ou 1
 
+- __Classes desequilibradas__ (_skewed constants_): Quando uma das classes é muito inferior às demais. Por exemplo, se num dataset de pacientes que possuem ou não cancer, somente 0,5% possuir câncer.
+
+- __Clustering__: Um agrupamento de itens com base em características em comum. Muito utilizado em apdenziado não-supervisionado.
+
 ## Aprendizado de máquina (Machine learning)
 
 __Arthur Samuel (1965)__: Campo de estudo que propicia a computadores a habilidade de aprender sem ser explicitamente programado.
@@ -48,6 +52,15 @@ Regressão Logística é uma técnica de modelagem utilizada para lidar com vari
 ![](https://estatsite.files.wordpress.com/2018/08/linear_vs_logistic_regression.jpg?w=940)
 Fonte da Imagem: https://www.machinelearningplus.com
 
+## Support Vector Machine (SVM)
+
+Uma máquina de vetores de suporte (SVM, do inglês: support vector machine) é um conceito na ciência da computação para um conjunto de métodos de aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão. O SVM padrão toma como entrada um conjunto de dados e prediz, para cada entrada dada, qual de duas possíveis classes a entrada faz parte, o que faz do SVM um classificador linear binário não probabilístico. Dados um conjunto de exemplos de treinamento, cada um marcado como pertencente a uma de duas categorias, um algoritmo de treinamento do SVM constrói um modelo que atribui novos exemplos a uma categoria ou outra. Um modelo SVM é uma representação de exemplos como pontos no espaço, mapeados de maneira que os exemplos de cada categoria sejam divididos por um espaço claro que seja tão amplo quanto possível. Os novos exemplos são então mapeados no mesmo espaço e preditos como pertencentes a uma categoria baseados em qual o lado do espaço eles são colocados.
+
+Em outras palavras, o que uma SVM faz é encontrar uma linha de separação, mais comumente chamada de hiperplano entre dados de duas classes. Essa linha busca maximizar a distância entre os pontos mais próximos em relação a cada uma das classes:
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/31/%D7%9E%D7%9B%D7%95%D7%A0%D7%AA_%D7%95%D7%95%D7%A7%D7%98%D7%A8%D7%99%D7%9D_%D7%AA%D7%95%D7%9E%D7%9B%D7%99%D7%9D_%D7%93%D7%95%D7%92%D7%9E%D7%90.jpg)
+Fonte da Imagem: https://pt.wikipedia.org/wiki
+
 ## Função sigmóide
 
 A função sigmóide é uma função matemática de amplo uso em campos como a economia e a computação. O nome "sigmóide" vem da forma em S do seu gráfico. Ela assume valores apenas entre 0 e 1.
@@ -76,3 +89,5 @@ No âmbito do machine learning, é utilizada para otimizar a função de custo, 
 - [Regressão Linear](https://pt.wikipedia.org/wiki/Regress%C3%A3o_linear)
 
 - [Mãos à Obra: Aprendizado de Máquina com Scikit-Learn & TensorFlow](https://www.amazon.com.br/M%C3%A3os-Obra-Aprendizado-Scikit-Learn-TensorFlow/dp/8550803812)
+
+- [Máquina de vetores de suporte](https://pt.wikipedia.org/wiki/M%C3%A1quina_de_vetores_de_suporte)
