@@ -79,7 +79,6 @@ O método do gradiente (ou método do máximo declive) é um método numérico u
 
 No âmbito do machine learning, é utilizada para otimizar a função de custo, buscando reduzir seu valor.
 
-
 ## Referências 
 
 - [Método do gradiente](https://pt.wikipedia.org/wiki/M%C3%A9todo_do_gradiente)

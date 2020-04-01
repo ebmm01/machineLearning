@@ -1,10 +1,49 @@
 ---
-title: RNN & LSTM
+title: Redes neurais
 ---
 
 ## O que são redes neurais
 
 Redes neurais são um conjunto de algoritmos que se assemelham ao cérebro humano e são projetados para reconhecer padrões. Eles interpretam os dados sensoriais através de uma percepção da máquina, rotulando ou agrupando dados brutos. Eles podem reconhecer padrões numéricos, contidos em vetores, nos quais todos os dados do mundo real (imagens, som, texto ou série temporal) devem ser traduzidos. As redes neurais artificiais são compostas por um grande número de elementos de processamento altamente interconectados (neurônio) trabalhando juntos para resolver um problema
+
+Um histórico resumido sobre Redes Neurais Artificiais deve começar por três das mais importantes publicações iniciais, desenvolvidas por: McCulloch e Pitts (1943), Hebb (1949), e Rosemblatt (1958). Estas publicações introduziram o primeiro modelo de redes neurais simulando “máquinas”, o modelo básico de rede de auto-organização, e o modelo Perceptron de aprendizado supervisionado, respectivamente.
+
+### Características Gerais das Redes Neurais
+
+Uma rede neural artificial é composta por várias unidades de processamento, cujo funcionamento é bastante simples. Essas unidades, geralmente são conectadas por canais de comunicação que estão associados a determinado peso. As unidades fazem operações apenas sobre seus dados locais, que são entradas recebidas pelas suas conexões. O comportamento inteligente de uma Rede Neural Artificial vem das interações entre as unidades de processamento da rede.
+
+A operação de uma unidade de processamento, proposta por McCullock e Pitts em 1943, pode ser resumida da seguinte maneira:
+
+- Sinais são apresentados à entrada;
+- Cada sinal é multiplicado por um número, ou peso, que indica a sua influência na saída da unidade;
+- É feita a soma ponderada dos sinais que produz um nível de atividade;
+- Se este nível de atividade exceder um certo limite (threshold) a unidade produz uma determinada resposta de saída.
+
+![](https://sites.icmc.usp.br/andre/research/neural/image/mccul.gif)
+
+Suponha que tenhamos p sinais de entrada X1, X2, ..., Xp e pesos w1, w2, ..., wp e limitador t; com sinais assumindo valores booleanos (0 ou 1) e pesos valores reais.
+
+Neste modelo, o nível de atividade a é dado por:
+
+    a = w1X1 + w2X2 + ... + wpXp
+
+A saída y é dada po
+
+    y = 1, se a >= t ou
+    y = 0, se a < t.
+
+A maioria dos modelos de redes neurais possui alguma regra de treinamento, onde os pesos de suas conexões são ajustados de acordo com os padrões apresentados. Em outras palavras, elas aprendem através de exemplos.
+
+Arquiteturas neurais são tipicamente organizadas em camadas, com unidades que podem estar conectadas às unidades da camada posterior.
+
+
+
+## Backpropagation (ou retropropagação)
+
+No aprendizado de máquina, a __retropropagação__ é um algoritmo amplamente utilizado no treinamento de redes neurais [feedforward](#recurrent-neural-networks) para aprendizado supervisionado. 
+
+Ao ajustar uma rede neural, a retropropagação calcula o gradiente da [função de custo](./funcoes/#notacoes-diversas) com relação aos pesos da rede para um único exemplo de entrada e saída e o faz com eficiência, diferentemente de um cálculo direto ingênuo do gradiente com relação a cada peso individualmente. Essa eficiência viabiliza o uso de métodos gradientes para o treinamento de redes multicamadas, atualizando pesos para minimizar perdas; descida de gradiente, ou variantes como descida de gradiente estocástica, são comumente usadas. O algoritmo de retropropagação funciona calculando o gradiente da função de perda com relação a cada peso pela regra da cadeia, calculando o gradiente uma camada por vez, repetindo a última camada para evitar cálculos redundantes de termos intermediários na regra da cadeia; este é um exemplo de programação dinâmica.
+
 
 ## Recurrent Neural Networks
 
@@ -29,7 +68,7 @@ Apesar de tudo, as redes neurais recorrentes possuem alguns problemas, dentre os
 
 ## Redes LSTM
 
-As redes Long Short-Term Memory (LSTM) são uma versão modificada de redes neurais recorrentes, que facilitam a lembrança de dados anteriores ​​na memória. O problema do __gradiente de fuga (vanishing gradient) das RNN's é resolvido aqui__. O LSTM é adequado para classificar, processar e prever séries temporais, visto que os LSTMs são projetados para evitar o problema de dependência de longo prazo. Ele treina o modelo usando back-propagation (ou propagação traseira). 
+As redes Long Short-Term Memory (LSTM) são uma versão modificada de redes neurais recorrentes, que facilitam a lembrança de dados anteriores ​​na memória. O problema do __gradiente de fuga (vanishing gradient) das RNN's é resolvido aqui__. O LSTM é adequado para classificar, processar e prever séries temporais, visto que os LSTMs são projetados para evitar o problema de dependência de longo prazo. Ele treina o modelo usando back-propagation (ou retropropagação). 
 
 Em uma rede LSTM, três 'portões' (_gates_) estão presentes:
 
@@ -46,6 +85,8 @@ Em uma rede LSTM, três 'portões' (_gates_) estão presentes:
 
 
 ## Referências
+
+[Características das redes neurais](https://sites.icmc.usp.br/andre/research/neural/)
 
 [Redes Neurais Recorrentes](http://deeplearningbook.com.br/redes-neurais-recorrentes/)
 
