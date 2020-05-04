@@ -14,11 +14,13 @@ module.exports = {
                     title: 'Artigos',
                     children: [
                         'sobre',
+                        'ideia',
                         'artigo1',
                         'artigo2',
                         'artigo3',
                         'artigo4',
-                        'artigo5'
+                        'artigo5',
+                        'artigo6',
                     ]
                 }
             ],
