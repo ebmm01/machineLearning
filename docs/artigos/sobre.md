@@ -22,8 +22,6 @@ Artigos que ainda não foram analisados e/ou resumidos:
 
 - [Consideration of the Local Correlation of Learning Behaviors to Predict Dropouts from MOOCs](https://ieeexplore-ieee-org.ez54.periodicos.capes.gov.br/stamp/stamp.jsp?tp=&arnumber=8858088)
 
-- [Predicting Dropout Using High School and First-semester Academic Achievement Measures](https://ieeexplore-ieee-org.ez54.periodicos.capes.gov.br/stamp/stamp.jsp?tp=&arnumber=9040158)
-
 - [Prediction of school dropout risk group using Neural Network](https://ieeexplore-ieee-org.ez54.periodicos.capes.gov.br/stamp/stamp.jsp?tp=&arnumber=6643984)
 
 - [Ensemble Regression Models Applied to Dropout in Higher Education](https://ieeexplore-ieee-org.ez54.periodicos.capes.gov.br/stamp/stamp.jsp?tp=&arnumber=8923655)
