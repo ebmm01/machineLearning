@@ -21,7 +21,8 @@ module.exports = {
                         'artigo4',
                         'artigo5',
                         'artigo6',
-                        'artigo7'
+                        'artigo7',
+                        'artigo8',
                     ]
                 }
             ],
