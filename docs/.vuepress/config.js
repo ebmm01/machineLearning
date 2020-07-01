@@ -13,6 +13,7 @@ module.exports = {
                 {
                     title: 'Artigos',
                     children: [
+                        'artigo',
                         'sobre',
                         'ideia',
                         'artigo1',
