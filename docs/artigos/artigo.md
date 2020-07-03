@@ -8,13 +8,13 @@ title: 'Artigo'
 
 ## Trabalho proposto
 
-// TODO
-
 O seguinte trabalho propõe um modelo que tenta verificar a relação mais eficaz entre a efetiva participação do aluno num curso vs dias passados, de forma a verificar após quantos dias um aluno que não realizou nenhuma atividade está a determinada porcentagem de evadir. 
 
 Para isso o seguinte pipeline foi elaborado e seguido:
 
 ![](../img/pipeline.png)
+
+Onde será utilizada a linguagem de programação __python__ e a biblioteca  __scikit learn__, que facilitará a aplicação dos algoritmos de aprendizagem automática. Também são utilizadas as bibliotecas matplotlib, numpy e pandas, para manipulação de gráficos, cálculos matemáticos e manipulação de dados, respectivamente.
 
 ### Obtenção dos dados
 
@@ -44,21 +44,22 @@ Como pode-se observar, alunos aprovados e alunos que abandonaram o curso possuem
 
 Antes de aplicar os algoritmos de aprendizagem automática, é necessário antes preparar os dados. Para isso alguns dados que previamente foram identificados como errôneos são removidos. Tais dados vão desde alunos alunos sem notas de provas com status aprovado à alunos que realizaram as provas após 1 mês da data de matrícula (o que não é permitido).  
 
-Na sequência é feita a remoção de colunas que não serão utilizadas. Tais colunas indicam dados desnecessários, como id da disciplina (único, logo o valor é repetido por todo o dataset) e notas máximas das atividades (sempre 100), e iriam influenciar negativamente os algoritmos.
+Na sequência é feita a remoção de colunas que não serão utilizadas. Tais colunas indicam dados desnecessários, como id da disciplina (único, logo o valor é repetido por todo o dataset) e notas máximas das atividades (sempre 100), e iriam influenciar negativamente os algoritmos. Para as demais colunas é preciso lidar com valores ausentes (null ou NaN), o que é feito adicionando-se um valor padrão por coluna representando a ausência do dado (por exemplo, caso uma linha não tenha UF, o valor 'sem_UF' é inserido).
 
-__Conversão de todas as datas em datetime e adição de valores padrões de datas para NaN/null__, a fim de evitar problemas futuros com a aplicação dos algoritmos. A data padrão inserida caso o valor esteja ausente é 2000-01-01 00:00:00. A data foi intencionalmente inserida, visto que ao calcular a diferença entre ela e o dia de matricula de um aluno sempre irá resultar em dias negativos, facilitando a manilupação posterior que será feita.
+Porém os algoritmos precisam lidar com números, e muitas colunas possuem strings como valores. Dessa forma é feito o encode das colunas com dados não inteiros, convertendo cada possível valor numa nova coluna. Isso aumenta consideravelmente a quantidade de colunas, mas permite que os algoritmos possam fazer os cálculos sem que haja nenhum problema. Ao final também é realizada a normalização dos dados visto que a escala de determinadas colunas eram bem diferentes: enquanto algumas tinham valores binários, indo de 0 à 1, outras podiam ir até 100.
 
-// TODO
+#### Trabalhando com datas
 
-- Adição das colunas dias entre atividade X e matrícula
+Como boa parte da área de interesse desse artigo diz respeito à tentativa de verificar como obter a melhor acurácia na menor quantidade possível de dias após a realização da matricula, de forma a efetivamente reduzir a possibilidade de um aluno evadir do curso, trabalhar com datas é imprescindível. 
 
-- Adição das colunas de atividades feitas até dia N
+Dessa forma, o primeiro passo realizado é a conversão de todas as datas em datetime e adição de valores padrões de datas para NaN/null, a fim de evitar problemas futuros com a aplicação dos algoritmos. A data padrão inserida caso o valor esteja ausente é 2000-01-01 00:00:00. A data foi intencionalmente inserida, visto que ao calcular a diferença entre ela e o dia de matricula de um aluno sempre irá resultar em dias negativos, facilitando a manipulação posterior que será feita.
 
-- Tratamento de dados ausentes para demais colunas
+Em seguida são adicionadas novas colunas, onde M e N são valores escolhidos por quem estiver executando o código.:
 
-- Encode no dataset inteiro com custom class
+- Dias entre atividade M e matrícula
+- Atividades feitas até dia N
 
-- Normalização dos dados
+Tais colunas são imprescindíveis para que os dados possam ser segmentados em dias após o momento da mátricula, independentemente de quando um aluno se inscreveu. A partir delas podemos verificar a provável situação de um aluno ao final do curso.
 
 ### Aplicação do algoritmo
 
