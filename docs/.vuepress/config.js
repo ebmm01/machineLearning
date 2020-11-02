@@ -41,6 +41,12 @@ module.exports = {
                         'relatorio',
                         'relatorio_tfjs',
                     ]
+                },
+                {
+                    title: 'Veículos autônomos',
+                    children: [
+                        'va',
+                    ]
                 }
             ],
             '/glossario/': [
