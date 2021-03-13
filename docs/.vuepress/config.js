@@ -46,6 +46,7 @@ module.exports = {
                     title: 'Veículos autônomos',
                     children: [
                         'va',
+                        'iara'
                     ]
                 }
             ],
