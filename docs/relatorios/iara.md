@@ -106,3 +106,18 @@ A principal motivação do desenvolvimento do NeuralMapper foi a substituição 
 No trabalho proposto, a PolyLaneNet recebe de input (entrada) imagens de uma câmera frontal montada no veículo e gera polinômios que representam cada marcação de faixa na imagem, junto com os domínios para esses polinômios e pontuações de confiança para cada faixa. Trabalhos anteriores também focavam em detecção de pistas baseadas em modelos e/ou aprendizagem  de máquina ( sem redes neurais ) porém não eram tão robustos para fatores como alteração de iluminação, condições climáticas dentre outros. Alguns modelos que utilizam redes neurais foram elaborados, porém ou não possuem o código fonte liberado para o público, ou não podem ter seus resultados reproduzidos. 
 
 Dessa forma, a PolyLaneNet se diferencia não somente por ter uma performance similar à modelos considerados _estado-da-arte_, mas também por permitir a reprodutibilidade. 
+
+Ao final verifica-se uma precisão consideravelmente alta para linhas mais próximas à camera, e menor conforme a distância até o horizonte aumenta (por um provável desbalanceamento nos dados) e um viés da rede para linhas em detrimento de curvas acentuadas.
+
+### Evaluating the Limits of a LiDAR for an Autonomous Driving Localization
+
+- __Ano__:  Abr/2020
+- __Categoria(s)__: Localização
+- __Técnicas/Algoritmos__: Distribuição Gaussiana, Normalized Mutual Information (NMI)
+- __Breve resumo__:
+
+> O trabalho apresenta uma análise para mostrar o quão simples pode ser um sensor LiDAR sem reduzir a precisão da localização que usa mapas rodoviários e de satélite juntos para posicionar globalmente o carro, e propõe uma nova técnica para localização global de um veículo.
+
+No trabalho proposto, os resultados mostram que mesmo com simplificações significativas no sensor LiDAR, ainda é possível realizar a localização do veículo com precisão suficiente para algumas aplicações (com testes realizados no IARA). As simplificações se dão pela redução dos scans horizontais, linhas verticais, _framerate_ e barulho (_noise_). Verifica-se que uma redução dos scans horizontais de 100% para 12% aumenta o Erro médio absoluto (_MAE_) de 0.8m para apenas 0.84m. 
+
+Outros cenários foram testados, mostrando que uma redução nos custos e tipo de sensores LiDAR podem ser feitas sem impactar significativamente a performance dos sistemas de localização.
