@@ -15,12 +15,20 @@ Título
 - Ano
 - Categoria(s)
 - Técnicas/ <br> Algoritmos
-
 - Breve resumo
 
-...
+|Índice| Ano| Categoria(s)| Técnicas/Algoritmos |
+|--|--|--|--|
+| 1 | Dez/2020 |Detecção de objetos (semáforos) | Faster R-CNN (também cita YOLO) |
+| 2 | Nov/2020 |Detecção de objetos (pistas) | LaneATT (modelo proposto) |
+| 3 | Jul/2020 |Detecção de objetos (sinais de trânsito) | Faster R-CNN para a validação das imagens geradas |
+| 4 | Jul/2020 |Planejamento de viagens/ caminho | CNN nomeado DeepPath (composto de três seções: WideResNet38, DeepLabV3 e uma seção final que realiza um up-sampling bilinear) |
+| 5 | Jul/2020 |Localização | DNN nomeado NeuralMapper |
+| 6 | Jul/2020 |Detecção de pistas | CNN nomeado PolyLaneNet (com um backbone EfficientNet-b0), mas também cita SCNN, Line-CNN, ENet-SAD e FastDraw |
+| 7 | Abr/2020 |Localização | Distribuição Gaussiana, Normalized Mutual Information (NMI) |
 
-### Deep traffic light detection by overlaying synthetic context on arbitrary natural images 
+
+### 1 - Deep traffic light detection by overlaying synthetic context on arbitrary natural images 
 
 - __Ano__:  Dez/2020
 - __Categoria(s)__: Detecção de objetos (semáforos)
@@ -36,7 +44,7 @@ A solução proposta se inicia pelo dataset, buscando ser o máximo balanceado p
 Os modelos foram treinando usando uma implementação pública disponibilizada no Tensorflow, que utiliza __Faster R-CNN__.
 
 
-### Keep your Eyes on the Lane: Real-time Attention-guided Lane Detection
+### 2 - Keep your Eyes on the Lane: Real-time Attention-guided Lane Detection
 
 - __Ano__:  Nov/2020
 - __Categoria(s)__: Detecção de objetos (pistas)
@@ -47,7 +55,7 @@ Os modelos foram treinando usando uma implementação pública disponibilizada n
 
 O modelo proposto, LaneATT, é um modelo de estágio único baseado em âncoras, como YOLOv3 ou SSD (Single Shot MultiBox Detector) para detecção de pistas. A detecção de âncoras é feita utilizando linhas ao invés de caixas. 
 
-### Deep Traffic Sign Detection and Recognition Without Target Domain Real Images
+### 3 - Deep Traffic Sign Detection and Recognition Without Target Domain Real Images
 
 - __Ano__:  Jul/2020
 - __Categoria(s)__: Detecção de objetos (sinais de trânsito)
@@ -64,7 +72,7 @@ Trabalhos anteriores já propuseram tal método, porém focados apenas na locali
 
 Dessa forma, os principais problemas relacionados à dificuldade de obtenção de imagens (datasets) de sinais de trânsito são sanados: a dificuldade em se anotar datasets volumosos e também de se obtê-los.
 
-### Image-Based Real-Time Path Generation Using Deep Neural Networks 
+### 4 - Image-Based Real-Time Path Generation Using Deep Neural Networks 
 
 - __Ano__:  Jul/2020
 - __Categoria(s)__: Planejamento de viagens/ caminho
@@ -81,7 +89,7 @@ Durante a operação de direção autônoma o DeepPath recebe um input (imagem) 
     - (ii) transformando cada posição do caminho no sistema de coordenadas do IARA em outra posição no sistema de coordenadas mundial.
 
 
-### A Large-Scale Mapping Method Based on Deep Neural Networks Applied to Self-Driving Car Localization 
+### 5 - A Large-Scale Mapping Method Based on Deep Neural Networks Applied to Self-Driving Car Localization 
 
 - __Ano__:  Jul/2020
 - __Categoria(s)__: Localização
@@ -94,7 +102,7 @@ A arquitetura DNN do NeuralMapper consiste em três camadas: um encoder, um cont
 
 A principal motivação do desenvolvimento do NeuralMapper foi a substituição do algoritmo OGM, para potencialmente reduzir a quantidade de linhas de código e a capacidade das redes neurais de lidarem com a não-linearidade dos dados. Ao final conclue-se que o NeuralMapper pode substituir o algoritmo OGM no IARA.
 
-### PolyLaneNet: Lane Estimation via Deep Polynomial Regression 
+### 6 - PolyLaneNet: Lane Estimation via Deep Polynomial Regression 
 
 - __Ano__:  Jul/2020
 - __Categoria(s)__: Detecção de pistas
@@ -109,7 +117,7 @@ Dessa forma, a PolyLaneNet se diferencia não somente por ter uma performance si
 
 Ao final verifica-se uma precisão consideravelmente alta para linhas mais próximas à camera, e menor conforme a distância até o horizonte aumenta (por um provável desbalanceamento nos dados) e um viés da rede para linhas em detrimento de curvas acentuadas.
 
-### Evaluating the Limits of a LiDAR for an Autonomous Driving Localization
+### 7 - Evaluating the Limits of a LiDAR for an Autonomous Driving Localization
 
 - __Ano__:  Abr/2020
 - __Categoria(s)__: Localização
