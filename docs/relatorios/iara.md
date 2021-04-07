@@ -23,6 +23,9 @@ Essa seção tem por objetivo categorizar alguns dos artigos do Prof. Alberto Fe
 | <a href="#id_13">[13]</a> | Jul/2019 | Detecção de objetos & geração de datasets | CycleGAN para geração do dataset, Faster R-CNN para treinamento e POC (também cita YOLO e RetinaNet para trabalhos futuros)  |
 | <a href="#id_14">[14]</a> | Jul/2019 | Detecção de objetos (sinais de trânsito) & geração de datasets | Faster R-CNN |
 | <a href="#id_15">[15]</a> | Jul/2019 | Detecção de objetos (semáforo) & detecção de estado dos mesmos | YOLOv3, mas também cita Faster R-CNN e DeepTLR |
+| <a href="#id_16">[16]</a> | Out/2018 | Remoção de ruído de mapas de grade de ocupação (OGM) | Map decay, GraphSLAM |
+| <a href="#id_17">[17]</a> | Ago/2018 | Estimação de direção de rumo (para alinhar o veículo à estrada) | CNN (inspirada na AlexNet com algumas modificações) |
+| <a href="#id_18">[18]</a> | Ago/2018 | Localização a partir do reconhecimento de lugares | Rede Híbrida entre _Weightless Neural Networks_ (WNN, nomeada VibGL) & _Convolutional Neural Network_ (CNN, baseada na VGG-16) |
 
 ### Template:
 
@@ -266,3 +269,69 @@ Trabalhos anteriores já abordaram a questão de reconhecimento de semáforos, p
 Dessa forma, o trabalho propõe utilizar os dados de mapas gerados pela IARA através dos sensores LiDAR e câmeras, em conjunto com a rede YOLOv3, para detectar semáforos e classificar o estado dos mesmos.
 
 O treinamento e validação do modelo foi realizado utilizando os datasets _DriveU Traffic Light Dataset_ (DTLD) e _LISA Traffic Light Dataset_ (LISATLD), ambos disponíveis de forma pública. Ao final a precisão variou de 60.86 à 88.59%, a depender do cenário e variáveis avaliadas.
+
+
+<div id="id_16"></div>
+
+
+### 16 - Memory-like Map Decay for Autonomous Vehicles based on Grid Maps
+
+- __Ano__:  Out/2018
+- __Categoria(s)__: Remoção de ruído de mapas de grade de ocupação (OGM)
+- __Técnicas/Algoritmos__: Map decay, GraphSLAM
+- __Breve resumo__:
+
+> O trabalho propõe uma estratégia para corrigir imperfeições em mapas de grade de ocupação (OGM) denominada decaimento de mapa (Map Decay), 
+
+O algoritmo proposto no trabalho, _Map decay_, usa como inspiração as habilidades do cérebro de liberar informações que não são mais necessárias da memória de curto prazo e de dar sentido a dados sensoriais incompletos, preenchendo-os com conhecimento de longo prazo. Dessa forma, ele torna-se uma solução simples e eficiente para lidar com imperfeições causadas por objetos em movimento.
+
+<div id="id_17"></div>
+
+### 17 - Heading Direction Estimation Using Deep Learning with Automatic Large-scale Data Acquisition
+
+- __Ano__:  Ago/2018
+- __Categoria(s)__: Estimação de direção de rumo (para alinhar o veículo à estrada)
+- __Técnicas/Algoritmos__: CNN (inspirada na AlexNet com algumas modificações)
+- __Breve resumo__:
+
+> O trabalho propõe uma abordagem para o problema de estimar a direção de rumo que mantém o veículo alinhado com a direção da estrada para Sistemas avançados de assistência ao motorista (do inglês _ADAS_)
+
+O sistema proposto utiliza plataformas públicas disponíveis (como _Open Street Maps_ e _Google street view_) para a obtenção dos dados e anotação dos mesmos, obtendo uma base de dados consideravelmente grande. Na sequência, a base de dados obtida é utilizada para treinar uma rede CNN que irá atacar o problema proposto, recebendo como entrada uma única imagem, prevendo a diferença na orientação atual do carro e a orientação "ideal" do carro 4 metros à frente na estrada. 
+
+Trabalhos anteriores já buscaram abordar esse problema, porém caiam em questões de complexidade algorítmica, dificuldade de generalização ou utilização de sensores caros, como LiDAR.  
+
+<div id="id_18"></div>
+
+### 18 - Visual Global Localization with a Hybrid WNN-CNN Approach
+
+- __Ano__:  Ago/2018
+- __Categoria(s)__: Localização a partir do reconhecimento de lugares
+- __Técnicas/Algoritmos__: Rede Híbrida entre _Weightless Neural Networks_ (WNN, nomeada VibGL) & _Convolutional Neural Network_ (CNN, baseada na VGG-16)
+- __Breve resumo__:
+
+> O trabalho propõe uma abordagem híbrida utilizando redes WNN e CNN para resolver o problema de localização global usando as informações topológicas e métricas para aproximar a posição atual do veículo, sendo bastante útil em ambientes onde não é possível utilizar GPS ()
+
+O paper ja abordou o problema de reconhecimento de lugar (_place recognition_) em trabalhos anteriores, gerando um sistema de reconhecimendo conhecido como _VibGL_ (WNN). 
+
+Para o trabalho proposto, a abordagem é dupla: (i) um WNN para resolver o reconhecimento de lugar como um problema de classificação e (ii) uma CNN para resolver a localização visual (_visual localization_) como um problema de regressão métrica.
+
+O sistema funciona da seguinte forma: dada uma imagem de câmera ao vivo, o primeiro sistema (i) recupera a imagem mais semelhante e sua pose associada, enquanto o último (ii) compara a imagem coletada com a imagem de câmera ao vivo para gerar uma pose relativa 6D. O resultado final é uma estimativa da pose atual do robô/veículo autônomo (IARA)
+
+Ao final, o sistema é capaz de localizar o veículo 90% do tempo com um erro médio de 1.2m, contra 1.12m do sistema _SLAM_ e 0.37m do GPS, ambos com 89% de localização.
+
+<div id="id_19"></div>
+
+### 19 - Mapping road lanes using laser remission and deep neural networks
+
+- __Ano__:  Ago/2018
+- __Categoria(s)__: 
+- __Técnicas/Algoritmos__: Efficient Neural Network (ENet) DNN
+- __Breve resumo__:
+
+> O trabalho propõe a utilização de redes neurais profundas (DNN) para resolver o problema de inferir a posição e propriedades relevantes de vias urbanas com sinalização horizontal (faixas/marcações na pista) pobre ou ausente, de forma a permitir a operação de carros autônomos em tais situações.
+
+O trabalho cita o fato de que, anteriormente ao projeto desenvolvido, o IARA (veículo autônomo), não possuia um mecanismo automático para inferir as faixas das estradas, utilizando _Road Definition Data Files_ (RDDF).
+
+Para o desenvolvimento da rede, um dataset foi elaborado a partir da construção de mapas de estradas utilizando dados do sensor LiDAR (Laser Remission) na região da UFES. O dataset foi anotado manualmente, e utilizado para o treinamento e validação da rede DNN. 
+
+Ao final do experimento, obteve-se uma acurácia média de 83.7%. Tal valor, de acordo com o paper, poderia ser superior, visto que a anotação manual possui imperfeições por ser bastante trabalhosa, impactando no treinamento da rede.
