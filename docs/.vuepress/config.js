@@ -7,6 +7,7 @@ module.exports = {
             { text: 'Artigos', link: '/artigos/sobre'},
             { text: 'Glossário', link: '/glossario/funcoes/'},
             { text: 'Relatorios', link: '/relatorios/relatorio' },
+            { text: 'Veículos Autônomos', link: '/veiculos/intro' },
         ],
         sidebar: {
             '/artigos/': [
@@ -57,6 +58,14 @@ module.exports = {
                         'funcoes',
                         'sobre_dl',
                         'algoritmos',
+                    ]
+                }
+            ],
+            '/veiculos/': [
+                {   
+                    title: 'Artigos & Datasets',
+                    children: [
+                        'datasets',
                     ]
                 }
             ],
