@@ -8,6 +8,7 @@ module.exports = {
             { text: 'Glossário', link: '/glossario/funcoes/'},
             { text: 'Relatorios', link: '/relatorios/relatorio' },
             { text: 'Veículos Autônomos', link: '/veiculos/intro' },
+            { text: 'TCC', link: '/tcc/index' },
         ],
         sidebar: {
             '/artigos/': [
