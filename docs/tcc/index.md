@@ -62,6 +62,18 @@ Obs.: O artigo original não especifica qual a resolução foi utilizada, logo o
 
 Para o psu, foi realizado um split (a partir de um script para automatizar a tarefa) em 80-20 (treino-teste) randômico. Os dados estão desbalanceados, pendendo mais para amostras positivas (com pedestres)
 
+## Yolov3
+
+|Ori.|Dataset|aP|
+|--|--|--|
+| Yolo default (coco dataset) | INRIA | 96,18% |
+| Yolo custom (INRIA) | INRIA | 91,41% |
+| Yolo default (coco dataset) | PSU | 76,02% |
+| Yolo custom (PSU) | PSU | 67,62% |
+| Yolo default (coco dataset) | INRIA & PSU | 79,29% |
+| Yolo custom (INRIA & PSU) | INRIA & PSU | 66,73% |
+
+
 ## Referências:
 
 - R. M. Castelino, G. P. M. Pinheiro, B. J. G. Praciano, G. A. Santos, L. Weichenberger and R. T. D. S. Júnior, "Improving the Accuracy of Pedestrian Detection in Partially Occluded or Obstructed Scenarios," 2020 10th International Conference on Advanced Computer Information Technologies (ACIT), 2020, pp. 834-838, doi: 10.1109/ACIT49673.2020.9208877.
